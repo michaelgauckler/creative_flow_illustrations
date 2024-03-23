@@ -1,0 +1,26 @@
+# Michael Gauckler, 2024, released under Attribution-ShareAlike 4.0 International (https://creativecommons.org/licenses/by-sa/4.0/)
+
+Create a python script that uses ChatGTP4 API to produce images based on prompts. 
+
+Here is how that script works:
+
+# file naming and handling
+
+- opens the file "input.txt"
+- summarise the input in 3-4 words
+- creates an output filename which consists of the date (yyyymmdd) plus a 24h timestamp with hours, minutes and seconds, a dash and than the 3-4 word summary of the input.
+
+# prompt assembly and archiving
+
+- assemble the prompt:
+- open "pre-prompt.txt" for the beginning of the prompt
+- add the prompt from "input.txt"
+- open "post-prompt.txt" for the end of the prompt
+- save the prompt under the filename plus ".txt"
+
+# API calling
+
+- call the ChatGTP 4 API to create n images (constant nofimages, set at the beginning of the script) on the basis of the prompt
+- save each of the image with name consisting of above filename, a dash and a two digit number corresponding of the n-th image
+- add code that checks for api throttling and adding a wait loop that tries again after a 2min wait
+

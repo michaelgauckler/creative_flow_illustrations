@@ -1,0 +1,1 @@
+... visualizes three animals (rat, monkey, panda) who are drawing self-portraits.
